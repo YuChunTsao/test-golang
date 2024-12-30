@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"github.com/YuChunTsao/test-golang/internal/hello"
 )
 
 func main() {
-	fmt.Println("Hello, world.")
+	hello.Hello()
 }
