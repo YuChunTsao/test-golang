@@ -4,8 +4,13 @@ package hello
 // The -ldl is sometimes necessary to fix linker errors about `dlsym`.
 
 /*
-#cgo LDFLAGS: ./pkg/test-rust/lib/hello/target/release/libhello.so -ldl
-#include "../../pkg/test-rust/lib/hello.h"
+#cgo linux LDFLAGS: ./pkg/test-rust/lib/hello/target/release/libhello.so -ldl
+#cgo linux CFLAGS: -I../../pkg/test-rust/lib
+#cgo darwin LDFLAGS: ./pkg/test-rust/lib/hello/target/release/libhello.dylib -ldl
+#cgo darwin CFLAGS: -I../../pkg/test-rust/lib
+#cgo windows LDFLAGS: .\pkg\test-rust\lib\hello\target\release\hello.lib
+#cgo windows CFLAGS: -I.\pkg\test-rust\lib
+#include "hello.h"
 #include <stdlib.h>
 */
 import "C"
