@@ -1,5 +1,9 @@
 # test golang
 
+[![Linux](https://github.com/YuChunTsao/test-golang/actions/workflows/linux.yml/badge.svg)](https://github.com/YuChunTsao/test-golang/actions/workflows/linux.yml)
+[![Mac](https://github.com/YuChunTsao/test-golang/actions/workflows/mac.yml/badge.svg)](https://github.com/YuChunTsao/test-golang/actions/workflows/mac.yml)
+[![Windows](https://github.com/YuChunTsao/test-golang/actions/workflows/windows.yml/badge.svg)](https://github.com/YuChunTsao/test-golang/actions/workflows/windows.yml)
+
 ## How to use this repository
 
 ### Clone the repository
