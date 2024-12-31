@@ -3,7 +3,7 @@ name: Windows
 on:
   push:
     branches:
-      - main
+      - dev
   workflow_dispatch:
 
 jobs:
@@ -33,6 +33,12 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: 1.23
+
+      - name: Set CGO environment variables
+        run: |
+          echo "CGO_ENABLED=1" >> $GITHUB_ENV
+          echo "CGO_CFLAGS=-I$(pwd)/pkg/test-rust/lib" >> $GITHUB_ENV
+          echo "CGO_LDFLAGS=-L$(pwd)/pkg/test-rust/lib/hello/target/release -lhello" >> $GITHUB_ENV
 
       - name: Build and test Go code
         run: go run main.go
