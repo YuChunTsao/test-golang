@@ -9,7 +9,7 @@ package hello
 #cgo darwin LDFLAGS: ./pkg/test-rust/lib/hello/target/release/libhello.dylib -ldl
 #cgo darwin CFLAGS: -I../../pkg/test-rust/lib
 #cgo windows LDFLAGS: -L${SRCDIR}/pkg/test-rust/lib/hello/target/release -lhello
-#cgo windows CFLAGS: -I${SRCDIR}/pkg/test-rust/lib
+#cgo windows CFLAGS: -I${SRCDIR}/../../pkg/test-rust/lib
 #include "hello.h"
 #include <stdlib.h>
 */
