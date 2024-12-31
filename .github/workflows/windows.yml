@@ -30,7 +30,9 @@ jobs:
         run: cargo build --manifest-path ./pkg/test-rust/lib/hello/Cargo.toml -r
 
       - name: List directory contents for debugging
-        run: dir D:\\a\\test-golang\\test-golang\\internal\\hello\\pkg\\test-rust\\lib\\hello\\target\\release
+        run: |
+          cd D:\a\test-golang\test-golang\pkg\test-rust\lib\hello\target\release
+          dir
 
       - name: Set up Go
         uses: actions/setup-go@v5
