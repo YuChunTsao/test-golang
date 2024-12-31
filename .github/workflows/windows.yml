@@ -29,6 +29,9 @@ jobs:
       - name: Build Rust library for Windows
         run: cargo build --manifest-path ./pkg/test-rust/lib/hello/Cargo.toml -r
 
+      - name: List directory contents for debugging
+        run: dir D:\\a\\test-golang\\test-golang\\internal\\hello\\pkg\\test-rust\\lib\\hello\\target\\release
+
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
